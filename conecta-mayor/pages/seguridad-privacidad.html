@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seguridad y privacidad — Conecta Mayor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container my-5">
+    <h1 class="fs-3"><i class="bi bi-shield-lock"></i> Seguridad y privacidad</h1>
+    <p class="text-muted">Consejos prácticos para proteger tus datos y evitar estafas.</p>
+
+    <section id="security-sim" class="container-card mb-4">
+      <h2 class="fs-5">Checklist esencial</h2>
+      <div class="mb-2"><small class="text-muted">Marca lo que ya haces:</small></div>
+      <ul class="list-group mb-2">
+        <li class="list-group-item"><input type="checkbox" class="sec-check me-2">Usar contraseñas seguras / gestor</li>
+        <li class="list-group-item"><input type="checkbox" class="sec-check me-2">Activar verificación en dos pasos (2FA)</li>
+        <li class="list-group-item"><input type="checkbox" class="sec-check me-2">No compartir datos por mensajes desconocidos</li>
+        <li class="list-group-item"><input type="checkbox" class="sec-check me-2">Comprobar remitentes antes de abrir enlaces</li>
+      </ul>
+      <div class="small text-muted sec-progress mb-2">0/4 completado</div>
+
+      <h3 class="fs-6">Mini cuestionario</h3>
+      <form class="sec-quiz">
+        <div class="mb-2"><label>1) ¿Qué es 2FA?</label>
+          <div><label><input type="radio" name="q1" value="a"> Una app para limpiar el PC</label></div>
+          <div><label><input type="radio" name="q1" value="b"> Una segunda verificación para acceder</label></div>
+        </div>
+        <div class="mb-2"><label>2) ¿Debes abrir un adjunto si no conoces el remitente?</label>
+          <div><label><input type="radio" name="q2" value="a"> No, no abrir</label></div>
+          <div><label><input type="radio" name="q2" value="b"> Sí, abrir siempre</label></div>
+        </div>
+        <button class="btn btn-primary">Comprobar respuestas</button>
+      </form>
+    </section>
+
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Ejemplos reales</h2>
+      <p class="text-muted">Casos prácticos y cómo reaccionar ante una posible estafa.</p>
+    </section>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Cómo reaccionar ante una posible estafa</h2>
+      <ol>
+        <li>No respondas al mensaje ni hagas clic en enlaces.</li>
+        <li>Si el mensaje parece de tu banco, contacta por teléfono oficial (no por el número del mensaje).</li>
+        <li>Bloquea al remitente y marca como spam.</li>
+        <li>Si crees que tu cuenta fue comprometida, cambia la contraseña y activa 2FA.</li>
+      </ol>
+      <p class="text-muted">Ejercicio: identifica qué elementos de un correo lo hacen sospechoso (remitente extraño, solicitando dinero, errores ortográficos).</p>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/partials-loader.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/simulators.js"></script>
+  <script>
+    if(window.ConectaSim) ConectaSim.initSecuritySimulator('security-sim');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

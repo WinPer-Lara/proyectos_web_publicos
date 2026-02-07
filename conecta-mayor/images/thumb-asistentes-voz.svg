@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#f8fbff" />
+  <circle cx="200" cy="100" r="44" fill="#e8f5fb" />
+  <text x="200" y="170" font-size="22" text-anchor="middle" fill="#175a78" font-family="Segoe UI, Arial">Asistentes de voz</text>
+</svg>

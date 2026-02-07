@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#f7fbfc" />
+  <rect x="60" y="60" width="220" height="140" rx="8" fill="#eaf7ff" />
+  <polygon points="300,110 340,90 340,210 300,190" fill="#dbeefc" />
+  <text x="170" y="140" font-size="26" text-anchor="middle" fill="#1b6b8b" font-family="Segoe UI, Arial">Videollamadas</text>
+</svg>

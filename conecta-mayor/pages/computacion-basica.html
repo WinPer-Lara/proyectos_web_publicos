@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computación básica — Conecta Mayor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container my-5">
+    <h1 class="fs-3">Computación básica</h1>
+    <p class="text-muted">Guía paso a paso para aprender a usar una computadora o tablet.</p>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Vídeo introductorio</h2>
+      <div id="video-embed" class="ratio ratio-16x9"></div>
+      <script>
+        // Insert a fallback MP4 when page is opened via file:// (YouTube embeds often fail locally).
+        (function(){
+          const container = document.getElementById('video-embed');
+          if(!container) return;
+          const isFile = location.protocol === 'file:';
+          if(isFile){
+            const link = document.createElement('a');
+            link.href = 'https://youtu.be/jxAgVn73OWg';
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.className = 'file-video-fallback d-flex align-items-center justify-content-center';
+            link.style.width = '100%'; link.style.height = '100%'; link.style.borderRadius = '6px'; link.style.background = 'var(--surface)'; link.style.color = 'var(--text)'; link.style.textDecoration = 'none';
+            link.setAttribute('aria-label','Abrir vídeo de computación básica en YouTube');
+            link.innerHTML = '<div style="text-align:center;"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg><div style="margin-top:8px;font-size:14px">Abrir en YouTube</div></div>';
+            container.appendChild(link);
+          } else {
+            // When served over HTTP/HTTPS, embed the specific YouTube video
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/jxAgVn73OWg';
+            iframe.title = 'Vídeo de computación básica';
+            iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen','');
+            iframe.style.borderRadius = '6px';
+            iframe.style.width = '100%'; iframe.style.height = '100%';
+            container.appendChild(iframe);
+          }
+        })();
+      </script>
+    </section>
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Lecciones detalladas</h2>
+      <h3 class="fs-6">1. Encender y apagar el equipo</h3>
+      <ol>
+        <li>Localiza el botón de encendido (lateral o frontal del PC, o botón de la tablet).</li>
+        <li>Pulsa el botón y espera a que aparezca el escritorio. No lo apagues bruscamente si el sistema está actualizando.</li>
+        <li>Para apagar: en Windows abre Inicio → Energía → Apagar; en macOS usa el menú Apple → Apagar; en tablets mantén pulsado el botón y selecciona Apagar.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">2. Escritorio, ventanas y barra de tareas</h3>
+      <p class="text-muted">El escritorio muestra accesos directos; las ventanas se minimizan, maximizan y cierran.</p>
+      <ol>
+        <li>Haz doble clic en un icono para abrir una aplicación (por ejemplo el navegador).</li>
+        <li>Usa los botones en la esquina superior (minimizar / maximizar / cerrar).</li>
+        <li>Para cambiar entre ventanas, haz clic en la barra de tareas o usa Alt+Tab (Windows).</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">3. Archivos y carpetas (paso a paso)</h3>
+      <ol>
+        <li>Abre el Explorador de archivos (icono de carpeta en Windows o Finder en macOS).</li>
+        <li>En Documentos, haz clic derecho → Nuevo → Carpeta. Nombra la carpeta y pulsa Enter.</li>
+        <li>Abre la carpeta, haz clic derecho → Nuevo → Documento de texto. Escribe y guarda el archivo.</li>
+        <li>Prueba mover el archivo con arrastrar y soltar dentro de la carpeta.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">4. Buscar información segura en Internet</h3>
+      <ol>
+        <li>Abre el navegador y ve al cuadro de búsqueda.</li>
+        <li>Escribe palabras claras (ej. "cómo cambiar la contraseña de correo") y revisa los resultados oficiales.</li>
+        <li>Evita enlaces que pidan datos personales sin verificación y busca el candado (HTTPS) en la barra de direcciones.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">5. Práctica guiada</h3>
+      <p class="text-muted">Realiza estas pequeñas tareas en tu equipo y marca cuando las completes:</p>
+      <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="task1"><label class="form-check-label" for="task1">He encendido/apagado el equipo correctamente</label></div>
+      <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="task2"><label class="form-check-label" for="task2">He creado una carpeta y un archivo</label></div>
+      <div class="form-check mb-1"><input class="form-check-input" type="checkbox" id="task3"><label class="form-check-label" for="task3">He hecho una búsqueda segura en el navegador</label></div>
+
+      <h3 class="fs-6 mt-3">FAQ y problemas comunes</h3>
+      <ul>
+        <li><strong>Mi equipo no enciende:</strong> comprueba el cable o la carga de la batería.</li>
+        <li><strong>No encuentro una aplicación:</strong> busca en el menú Inicio o en la barra de búsqueda.</li>
+        <li><strong>¿Puedo recuperar un archivo borrado?</strong> Revisa la Papelera de reciclaje.</li>
+      </ul>
+
+      <button id="download-checklist" class="btn btn-primary mt-2">Descargar checklist (PDF)</button>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/partials-loader.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/simulators.js"></script>
+  <!-- jsPDF for client-side PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    // Generate a simple checklist PDF on demand
+    async function generateChecklistPDF(){
+      try{
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+        const margin = 40;
+        let y = 60;
+        doc.setFontSize(18); doc.text('Checklist: Computación básica', margin, y);
+        y += 28;
+        doc.setFontSize(12);
+        const items = [
+          'Encender y apagar el equipo correctamente',
+          'Crear una carpeta y un archivo de texto',
+          'Realizar una búsqueda segura en el navegador',
+          'Comprobar cámara y micrófono (si procede)',
+          'Anotar dudas para la próxima sesión'
+        ];
+        for(let i=0;i<items.length;i++){
+          y += 20;
+          doc.text(String.fromCharCode(0x2022) + ' ' + items[i], margin, y);
+        }
+        y += 40;
+        doc.setFontSize(10);
+        doc.text('Generado por Conecta Mayor', margin, y);
+        doc.save('checklist-computacion-basica.pdf');
+      }catch(e){ console.error(e); alert('Error al generar el PDF.'); }
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const btn = document.getElementById('download-checklist');
+      if(btn) btn.addEventListener('click', (e)=>{ generateChecklistPDF(); });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

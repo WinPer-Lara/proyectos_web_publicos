@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asistentes de voz — Conecta Mayor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container my-5">
+    <h1 class="fs-3"><i class="bi bi-mic"></i> Asistentes de voz</h1>
+    <p class="text-muted">Comandos útiles para Alexa y Google Assistant, rutinas y privacidad.</p>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Comandos básicos</h2>
+      <ul>
+        <li>"¿Qué tiempo hace hoy?" — información meteorológica.</li>
+        <li>"Pon música" — reproducir canciones o listas de reproducción.</li>
+        <li>"Recordatorio: tomar medicación a las 9" — crear recordatorios.</li>
+      </ul>
+    </section>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Rutinas y automatizaciones</h2>
+      <p class="text-muted">Puedes programar rutinas (ej. "Buenos días") que activen varias acciones a la vez.</p>
+    </section>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Privacidad</h2>
+      <ul>
+        <li>Revisa el historial de voz y elimina grabaciones si lo deseas.</li>
+        <li>Desactiva la opción de compras por voz si no la necesitas.</li>
+      </ul>
+    </section>
+    <section id="voice-sim" class="container-card mb-4">
+      <h2 class="fs-5">Simulador de comandos</h2>
+      <p class="text-muted">Escribe un comando y pulsa Enviar para ver la respuesta simulada.</p>
+      <div class="mb-2"><input class="form-control voice-input" placeholder="¿Qué tiempo hace?" /></div>
+      <div class="d-flex gap-2 mb-2"><button class="btn btn-primary voice-send">Enviar</button><div class="border rounded p-2 voice-output" style="min-width:200px">Respuesta aquí</div></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/partials-loader.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/simulators.js"></script>
+  <script> if(window.ConectaSim) ConectaSim.initVoiceSimulator('voice-sim'); </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

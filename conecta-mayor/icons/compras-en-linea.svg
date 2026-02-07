@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true">
+  <title>Compras</title>
+  <path d="M3 6h2l1 12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1l1-12h2" fill="#2B7BB9" />
+  <circle cx="10" cy="20" r="1" fill="#fff" />
+  <circle cx="17" cy="20" r="1" fill="#fff" />
+</svg>

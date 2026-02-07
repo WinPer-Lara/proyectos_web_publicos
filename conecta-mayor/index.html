@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conecta Mayor — Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <header class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h1 class="display-6">Aprende tecnología paso a paso</h1>
+          <p class="lead text-muted">Guías sencillas, vídeos cortos y prácticas pensadas para personas mayores.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a class="btn btn-primary btn-lg" href="pages/computacion-basica.html">Empezar por Computación básica</a>
+            <a class="btn btn-outline-secondary btn-lg" href="#cursos">Ver cursos</a>
+          </div>
+        </div>
+        <div class="col-md-5 text-center mt-4 mt-md-0">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" alt="Persona mayor con tablet" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5" id="cursos">
+    <div class="mb-4">
+      <input class="form-control form-control-lg" type="search" placeholder="Buscar curso o tema (ej. correo, videollamada)" aria-label="Buscar">
+    </div>
+
+    <div class="row g-3">
+      <!-- Repite esta tarjeta por cada categoría -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/computacion-basica.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+                <div class="col-4">
+                <img src="images/thumb-computacion-basica.svg" class="img-fluid rounded-start" alt="Miniatura computación">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/computacion-basica.svg" class="icon me-2" alt="">Computación básica</h3>
+                  <p class="card-text text-muted">Uso de PC/tablet, archivos y práctica guiada.</p>
+                  <span class="badge bg-primary">Vídeo + Simulador</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/correo-electronico.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-correo-electronico.svg" class="img-fluid rounded-start" alt="Miniatura correo">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/correo-electronico.svg" class="icon me-2" alt="">Correo electrónico</h3>
+                  <p class="card-text text-muted">Crear cuenta, enviar adjuntos y organizar la bandeja.</p>
+                  <span class="badge bg-primary">Ejercicios</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/mensajeria.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-mensajeria.svg" class="img-fluid rounded-start" alt="Miniatura mensajeria">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/mensajeria.svg" class="icon me-2" alt="">Mensajería</h3>
+                  <p class="card-text text-muted">WhatsApp y Telegram: enviar mensajes, notas de voz y grupos.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/videollamadas.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-videollamadas.svg" class="img-fluid rounded-start" alt="Miniatura videollamadas">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/videollamadas.svg" class="icon me-2" alt="">Videollamadas</h3>
+                  <p class="card-text text-muted">Zoom, Meet y llamadas por WhatsApp: unirse y compartir pantalla.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/seguridad-privacidad.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-seguridad-privacidad.svg" class="img-fluid rounded-start" alt="Miniatura seguridad">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/seguridad-privacidad.svg" class="icon me-2" alt="">Seguridad y privacidad</h3>
+                  <p class="card-text text-muted">Contraseñas, 2FA y cómo evitar fraudes comunes.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/telemedicina.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-telemedicina.svg" class="img-fluid rounded-start" alt="Miniatura telemedicina">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/telemedicina.svg" class="icon me-2" alt="">Telemedicina</h3>
+                  <p class="card-text text-muted">Agendar citas, recordatorios y herramientas de salud digital.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/banca-pagos.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-banca-pagos.svg" class="img-fluid rounded-start" alt="Miniatura banca">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/banca-pagos.svg" class="icon me-2" alt="">Banca y pagos</h3>
+                  <p class="card-text text-muted">Consultar saldo, transferencias básicas y seguridad.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/compras-en-linea.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-compras-en-linea.svg" class="img-fluid rounded-start" alt="Miniatura compras">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/compras-en-linea.svg" class="icon me-2" alt="">Compras en línea</h3>
+                  <p class="card-text text-muted">Buscar, comparar y comprar con seguridad.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/entretenimiento.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-entretenimiento.svg" class="img-fluid rounded-start" alt="Miniatura entretenimiento">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/entretenimiento.svg" class="icon me-2" alt="">Entretenimiento</h3>
+                  <p class="card-text text-muted">Streaming, audiolibros y actividades recreativas.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/hogar-inteligente.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-hogar-inteligente.svg" class="img-fluid rounded-start" alt="Miniatura hogar inteligente">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/hogar-inteligente.svg" class="icon me-2" alt="">Hogar inteligente</h3>
+                  <p class="card-text text-muted">Cámaras, termostatos y controles simples para el hogar.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/asistentes-voz.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-asistentes-voz.svg" class="img-fluid rounded-start" alt="Miniatura asistentes de voz">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/asistentes-voz.svg" class="icon me-2" alt="">Asistentes de voz</h3>
+                  <p class="card-text text-muted">Comandos útiles en Alexa y Google Assistant.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/servicios-gubernamentales.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-servicios-gubernamentales.svg" class="img-fluid rounded-start" alt="Miniatura servicios gubernamentales">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/servicios-gubernamentales.svg" class="icon me-2" alt="">Servicios gubernamentales</h3>
+                  <p class="card-text text-muted">Trámites online, certificados y orientación práctica.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="pages/navegadores-e-internet.html" class="text-decoration-none text-reset">
+          <article class="card container-card h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-4">
+                <img src="images/thumb-computacion-basica.svg" class="img-fluid rounded-start" alt="Miniatura navegadores">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h3 class="card-title fs-5"><img src="icons/navegadores-e-internet.svg" class="icon me-2" alt="">Navegadores e Internet</h3>
+                  <p class="card-text text-muted">Búsquedas seguras, marcadores y privacidad.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <!-- Más tarjetas (mensajería, videollamadas, seguridad...) -->
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/partials-loader.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/simulators.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

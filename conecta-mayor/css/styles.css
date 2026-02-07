@@ -1,0 +1,122 @@
+:root{
+  --bg: #F6F8FA;
+  --surface: #FFFFFF;
+  --text: #0F1720;
+  --muted: #475569;
+  --primary: #2B7BB9;
+  --secondary: #7FB6B0;
+  --accent: #F4B643;
+  --success: #2E8B57;
+  --warning: #F29C1F;
+  --danger: #D9534F;
+  --border: #DDE6EE;
+  --radius: 8px;
+  --base-font: 18px;
+}
+
+html{ font-size: var(--base-font); }
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Noto Sans", "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.btn-primary{
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 18px;
+  min-height: 44px;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  border: none;
+}
+
+.text-large{ font-size: 1.25rem; }
+.text-larger{ font-size: 1.5rem; }
+
+/* High contrast mode variables applied when body.high-contrast is present */
+body.high-contrast{
+  --bg: #000000;
+  --surface: #111111;
+  --text: #FFFFFF;
+  --muted: #CCCCCC;
+}
+
+/* Focus styles for keyboard users */
+button:focus, a:focus, input:focus {
+  outline: 3px solid rgba(43,123,185,0.25);
+  outline-offset: 2px;
+}
+
+/* Utilities */
+.large-button{ padding: 14px 20px; font-size: 1.125rem; min-height:48px; }
+
+@media (max-width: 576px){
+  html{ font-size: 16px; }
+  .display-6{ font-size: 1.5rem; }
+}
+
+/* Fixed header and shrink-on-scroll */
+.navbar-fixed{ position:fixed; top:0; left:0; right:0; z-index:1030; background: var(--surface); box-shadow: 0 2px 8px rgba(15,23,32,0.06); transition: padding 200ms ease, transform 200ms ease; }
+.navbar-fixed .container{ transition: padding 200ms ease; }
+.navbar-fixed .navbar-brand{ transition: font-size 200ms ease; }
+.navbar-fixed.navbar-shrink{ padding-top:6px; padding-bottom:6px; }
+.navbar-fixed.navbar-shrink .navbar-brand{ font-size:1rem; }
+
+/* Floating accessibility controls (top-left) */
+.fixed-accessible-controls{ position:fixed; top:12px; right:12px; left:auto; z-index:1040; display:flex; gap:6px; align-items:center; }
+.fixed-accessible-controls .btn{ padding:6px 8px; font-size:14px; border-radius:6px; }
+
+/* Invert colors toggle implemented via CSS variables to avoid creating stacking contexts
+   (using filter on body breaks position:fixed in many browsers). */
+body.inverted-colors{
+  --bg: #0B0B0B;
+  --surface: #0F0F0F;
+  --text: #F5F5F5;
+  --muted: #D1D5DB;
+  --primary: #6FB6FF;
+  --accent: #F4D67A;
+}
+
+/* Improve contrast for buttons and links in inverted mode */
+/* Make non-button links and brand use primary accent in inverted mode (exclude .btn) */
+body.inverted-colors a:not(.btn),
+body.inverted-colors .navbar-brand{
+  color: var(--primary) !important;
+}
+
+/* Keep floating controls and actual buttons with their normal styles; only adjust primary button */
+body.inverted-colors .btn-primary{
+  background: var(--primary) !important;
+  color: #072033 !important;
+}
+
+/* Card titles / site links: ensure anchor-wrapped cards display readable title color */
+body.inverted-colors a.text-decoration-none .card-title{
+  color: var(--primary) !important;
+}
+
+/* Ensure links and text inside cards are readable (use light text) */
+body.inverted-colors .container-card,
+body.inverted-colors .container-card .card-body,
+body.inverted-colors .container-card .card-text,
+body.inverted-colors .container-card .small,
+body.inverted-colors .container-card p{ color: #ffffff !important; }
+body.inverted-colors .container-card .card-text{ color: rgba(255,255,255,0.85) !important; }
+body.inverted-colors .container-card a, body.inverted-colors .container-card a *{ color: var(--primary) !important; }
+
+/* Icon images used in card titles */
+.card-title img.icon{ width:20px; height:20px; vertical-align:middle; filter: none; }
+body.inverted-colors .card-title img.icon{ filter: none; }
+
+/* Ensure main content isn't hidden under fixed header when JS disabled */
+body.has-fixed-header{ padding-top:72px; }

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Correo electrónico — Conecta Mayor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container my-5">
+    <h1 class="fs-3"><i class="bi bi-envelope"></i> Correo electrónico</h1>
+    <p class="text-muted">Aprende a crear una cuenta, enviar correos y gestionar tu bandeja.</p>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Vídeo guía</h2>
+      <div class="ratio ratio-16x9">
+          <div id="video-embed" class="ratio ratio-16x9"></div>
+          <script>
+            (function(){
+              const container = document.getElementById('video-embed');
+              if(!container) return;
+              const isFile = location.protocol === 'file:';
+              const YT_ID = '2AHXar82iL0';
+              if(isFile){
+                const link = document.createElement('a');
+                link.href = 'https://youtu.be/2AHXar82iL0';
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.className = 'file-video-fallback d-flex align-items-center justify-content-center';
+                link.style.width = '100%'; link.style.height = '100%'; link.style.borderRadius = '6px'; link.style.background = 'var(--surface)'; link.style.color = 'var(--text)'; link.style.textDecoration = 'none';
+                link.setAttribute('aria-label','Abrir vídeo de correo electrónico en YouTube');
+                link.innerHTML = '<div style="text-align:center;"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg><div style="margin-top:8px;font-size:14px">Abrir en YouTube</div></div>';
+                container.appendChild(link);
+              } else {
+                const iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube.com/embed/' + YT_ID;
+                iframe.title = 'Vídeo de correo electrónico';
+                iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                iframe.setAttribute('allowfullscreen','');
+                iframe.style.borderRadius = '6px'; iframe.style.width = '100%'; iframe.style.height = '100%';
+                container.appendChild(iframe);
+              }
+            })();
+          </script>
+      </div>
+    </section>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Lecciones detalladas</h2>
+      <h3 class="fs-6">1. Crear una cuenta (Gmail ejemplo)</h3>
+      <ol>
+        <li>Entra en <a href="https://accounts.google.com" target="_blank">accounts.google.com</a>.</li>
+        <li>Pulsa en "Crear cuenta" y sigue los campos: nombre, correo deseado y contraseña.</li>
+        <li>Verifica con un código en tu móvil si lo solicita.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">2. Enviar, responder y adjuntar</h3>
+      <ol>
+        <li>Pulsa "Redactar" para crear un nuevo mensaje.</li>
+        <li>Escribe la dirección del destinatario en "Para", añade asunto y cuerpo del mensaje.</li>
+        <li>Adjuntar archivo: pulsa el icono de clip y selecciona el archivo desde tu ordenador.</li>
+        <li>Pulsa "Enviar". Para responder, abre el mensaje y pulsa "Responder".</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">3. Organizar la bandeja</h3>
+      <p class="text-muted">Usa carpetas/etiquetas y el buscador para encontrar correos.</p>
+      <ol>
+        <li>Crear carpeta/etiqueta: en el menú lateral busca "Crear etiqueta" o "Nueva carpeta".</li>
+        <li>Mover correos: arrastra o usa el menú "Mover a".</li>
+        <li>Buscar: usa palabras clave y filtros (remitente, fecha).</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">4. Spam y seguridad</h3>
+      <ul>
+        <li>Si un correo parece sospechoso, no abras enlaces ni descargues adjuntos.</li>
+        <li>Marca como Spam o Bloquea el remitente.</li>
+      </ul>
+
+      <a class="btn btn-primary mt-2" href="#email-sim">Abrir simulador de correo</a>
+    </section>
+
+    <section id="email-sim" class="container-card mb-4">
+      <h2 class="fs-5">Simulador de correo</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="fs-6">Bandeja de entrada</h3>
+          <ul class="list-group inbox-list mb-3" style="min-height:120px"></ul>
+          <h3 class="fs-6">Enviados</h3>
+          <ul class="list-group sent-list mb-3" style="min-height:80px"></ul>
+        </div>
+        <div class="col-md-6">
+          <h3 class="fs-6">Redactar mensaje</h3>
+          <form class="compose-form">
+            <div class="mb-2"><label class="form-label">Para</label><input name="to" class="form-control" required></div>
+            <div class="mb-2"><label class="form-label">Asunto</label><input name="subject" class="form-control" required></div>
+            <div class="mb-2"><label class="form-label">Mensaje</label><textarea name="body" class="form-control" rows="5"></textarea></div>
+            <button class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Recursos</h2>
+      <ul>
+        <li><a href="#"><i class="bi bi-file-earmark-pdf-fill me-2"></i>Checklist: crear y asegurar tu correo</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/partials-loader.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/simulators.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    if(window.ConectaSim) ConectaSim.initEmailSimulator('email-sim');
+  </script>
+</body>
+</html>
+
