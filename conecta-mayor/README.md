@@ -24,3 +24,5 @@ Nota sobre recursos visuales:
 Recomendaciones:
 - Probar con usuarios reales y ajustar tamaños/contrastes según feedback.
 - Sustituir vídeos y recursos por contenidos locales/propios.
+ 
+ 
