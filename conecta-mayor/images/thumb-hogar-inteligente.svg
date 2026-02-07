@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#fbfbfb" />
+  <path d="M200 40l110 80H90z" fill="#eef7f4" />
+  <text x="200" y="180" font-size="22" text-anchor="middle" fill="#175a78" font-family="Segoe UI, Arial">Hogar inteligente</text>
+</svg>

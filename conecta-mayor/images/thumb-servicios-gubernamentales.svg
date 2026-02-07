@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#f6fbfb" />
+  <path d="M60 200h280v12H60z" fill="#e6f4fb" />
+  <text x="200" y="140" font-size="22" text-anchor="middle" fill="#175a78" font-family="Segoe UI, Arial">Servicios</text>
+</svg>

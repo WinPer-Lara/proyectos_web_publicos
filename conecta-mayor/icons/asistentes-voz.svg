@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true">
+  <title>Asistentes de voz</title>
+  <path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z" fill="#2B7BB9" />
+  <path d="M19 13v1a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5v-1" fill="#2B7BB9" opacity="0.95" />
+</svg>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#f2f8f9" />
+  <path d="M200 40c40 0 80 24 80 64v60c0 40-40 80-80 96-40-16-80-56-80-96V104c0-40 40-64 80-64z" fill="#e6f6fb" />
+  <text x="200" y="150" font-size="24" text-anchor="middle" fill="#175b6f" font-family="Segoe UI, Arial">Seguridad</text>
+</svg>

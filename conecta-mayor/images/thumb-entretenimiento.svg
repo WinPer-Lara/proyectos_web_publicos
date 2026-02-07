@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="12" fill="#fbfcfe" />
+  <circle cx="200" cy="110" r="44" fill="#eef6ff" />
+  <polygon points="190,96 210,110 190,124" fill="#1a6a8b" />
+  <text x="200" y="180" font-size="22" text-anchor="middle" fill="#175a78" font-family="Segoe UI, Arial">Entretenimiento</text>
+</svg>

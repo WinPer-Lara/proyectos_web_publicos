@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mensajería — Conecta Mayor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container my-5">
+    <h1 class="fs-3"><i class="bi bi-chat-dots"></i> Mensajería</h1>
+    <p class="text-muted">Aprende a usar WhatsApp y Telegram: mensajes, notas de voz y seguridad.</p>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Lecciones detalladas</h2>
+      <h3 class="fs-6">1. Instalar y configurar</h3>
+      <ol>
+        <li>En el teléfono abre la tienda de apps (Play Store o App Store).</li>
+        <li>Busca "WhatsApp" o "Telegram" y pulsa instalar.</li>
+        <li>Al abrir la app, acepta permisos (micrófono/almacenamiento) si los solicita para enviar notas o fotos.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">2. Enviar mensajes y fotos</h3>
+      <ol>
+        <li>Abre un chat y escribe en el cuadro inferior, pulsa enviar.</li>
+        <li>Para enviar una foto, pulsa el icono de clip o la cámara y selecciona una imagen.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">3. Notas de voz y videomensajes</h3>
+      <p class="text-muted">Mantén pulsado el icono del micrófono para grabar una nota de voz.</p>
+
+      <h3 class="fs-6 mt-3">4. Grupos y seguridad</h3>
+      <ol>
+        <li>Crear grupo: busca "Nuevo grupo" y añade participantes.</li>
+        <li>Privacidad: en ajustes puedes elegir quién ve tu foto y estado.</li>
+      </ol>
+
+      <h3 class="fs-6 mt-3">5. Copia de seguridad y transferencia</h3>
+      <p class="text-muted">Activa las copias de seguridad para no perder mensajes (en Ajustes → Chats → Copia de seguridad).</p>
+
+      <a class="btn btn-primary mt-2" href="#chat-sim">Abrir simulador de mensajería</a>
+    </section>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Vídeo demostrativo</h2>
+      <div id="video-embed" class="ratio ratio-16x9"></div>
+      <script>
+        (function(){
+          const container = document.getElementById('video-embed');
+          if(!container) return;
+          const isFile = location.protocol === 'file:';
+          const YT_ID = 'jrujkYObjB8';
+          if(isFile){
+            const link = document.createElement('a');
+            link.href = 'https://youtu.be/jrujkYObjB8';
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.className = 'file-video-fallback d-flex align-items-center justify-content-center';
+            link.style.width = '100%'; link.style.height = '100%'; link.style.borderRadius = '6px'; link.style.background = 'var(--surface)'; link.style.color = 'var(--text)'; link.style.textDecoration = 'none';
+            link.setAttribute('aria-label','Abrir vídeo de mensajería en YouTube');
+            link.innerHTML = '<div style="text-align:center;"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg><div style="margin-top:8px;font-size:14px">Abrir en YouTube</div></div>';
+            container.appendChild(link);
+          } else {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + YT_ID;
+            iframe.title = 'Vídeo de mensajería';
+            iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen','');
+            iframe.style.borderRadius = '6px'; iframe.style.width = '100%'; iframe.style.height = '100%';
+            container.appendChild(iframe);
+          }
+        })();
+      </script>
+    </section>
+
+    <section id="chat-sim" class="container-card mb-4">
+      <h2 class="fs-5">Simulador de mensajería</h2>
+      <div class="chat-messages mb-3" style="height:220px;overflow:auto;background:#fff;padding:12px;border-radius:8px;border:1px solid var(--border);"></div>
+      <div class="d-flex gap-2">
+        <input class="form-control chat-input" placeholder="Escribe un mensaje...">
+        <button class="btn btn-primary chat-send">Enviar</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/partials-loader.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/simulators.js"></script>
+  <script>
+    if(window.ConectaSim) ConectaSim.initChatSimulator('chat-sim');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

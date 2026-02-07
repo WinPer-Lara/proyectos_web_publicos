@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telemedicina — Conecta Mayor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container my-5">
+    <h1 class="fs-3"><i class="bi bi-heart-pulse"></i> Telemedicina y salud digital</h1>
+    <p class="text-muted">Cómo agendar citas, usar recordatorios y conectar con servicios de salud online.</p>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Pasos para usar telemedicina</h2>
+      <ol>
+        <li>Registrar o acceder a tu portal de salud.</li>
+        <li>Buscar y agendar una cita virtual.</li>
+        <li>Preparar información médica básica antes de la consulta.</li>
+        <li>Usar recordatorios y apps de medicación.</li>
+      </ol>
+    </section>
+
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Recursos útiles</h2>
+      <ul>
+        <li><a href="#"><i class="bi bi-file-earmark-pdf-fill me-2"></i>Guía: preparar tu cita online</a></li>
+      </ul>
+    </section>
+
+    <section id="tele-sim" class="container-card mb-4">
+      <h2 class="fs-5">Agendar cita (simulador)</h2>
+      <form class="appt-form">
+        <div class="mb-2"><label class="form-label">Nombre</label><input name="name" class="form-control" required></div>
+        <div class="row g-2 mb-2"><div class="col"><label class="form-label">Fecha</label><input type="date" name="date" class="form-control" required></div><div class="col"><label class="form-label">Hora</label><input type="time" name="time" class="form-control" required></div></div>
+        <button class="btn btn-primary">Agendar</button>
+      </form>
+      <h3 class="fs-6 mt-3">Próximas citas</h3>
+      <ul class="list-group appointments-list" style="min-height:60px"></ul>
+    </section>
+    <section class="container-card mb-4">
+      <h2 class="fs-5">Preparar la cita</h2>
+      <ol>
+        <li>Reúne tus medicamentos y anota las preguntas para el médico.</li>
+        <li>En el día de la cita, conéctate 5–10 minutos antes para comprobar audio y cámara.</li>
+        <li>Ten a mano un teléfono de contacto en caso de problemas técnicos.</li>
+      </ol>
+      <h3 class="fs-6 mt-3">Checklist técnico</h3>
+      <ul>
+        <li>Conexión estable a Internet.</li>
+        <li>Micrófono y cámara funcionando.</li>
+        <li>Documento de identidad disponible si lo piden.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/partials-loader.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/simulators.js"></script>
+  <script>
+    if(window.ConectaSim) ConectaSim.initTelemedicineSimulator('tele-sim');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
