@@ -88,7 +88,21 @@
 
   window.initAccessibilityControls = initAccessibilityControls;
 
-  // Auto-init on DOM ready in case header is already present
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ()=>{ setTimeout(()=>{ if(window.initAccessibilityControls) window.initAccessibilityControls(); }, 0); }); else setTimeout(()=>{ if(window.initAccessibilityControls) window.initAccessibilityControls(); }, 0);
+  // Auto-init on DOM ready, waiting for partials to be loaded if necessary
+  function tryInit() {
+    // Wait for partials to be loaded (they're loaded asynchronously)
+    if(window.ConectaMayorPartialsLoaded || document.getElementById('site-header')) {
+      if(window.initAccessibilityControls) window.initAccessibilityControls();
+    } else {
+      // Check again after a short delay or on next DOM modification
+      setTimeout(tryInit, 100);
+    }
+  }
+  
+  if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryInit);
+  } else {
+    setTimeout(tryInit, 0);
+  }
 
 })();

@@ -3,7 +3,7 @@
     <div class="d-flex align-items-center">
       <button id="back-button" class="btn btn-outline-secondary btn-sm me-2" aria-label="Volver">← Volver</button>
       <a id="brand-link" class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img id="site-logo" src="" data-src-root="icons/logo-elder.svg" data-src-pages="../icons/logo-elder.svg" alt="Conecta Mayor" style="width:44px;height:44px;" />
+        <img id="site-logo" src="" alt="Conecta Mayor" style="width:44px;height:44px;" />
         <span class="fw-bold fs-5">Conecta Mayor</span>
       </a>
     </div>
@@ -22,13 +22,13 @@
     try{
       var img = document.getElementById('site-logo');
       if(!img) return;
-      var path = location.pathname || '';
-      // Detect pages served from a /pages/ subfolder (works for file:// and http)
-      var isInPages = path.indexOf('/pages/') !== -1 || path.indexOf('\\pages\\') !== -1 || path.startsWith('/pages') || path.startsWith('pages/');
-      img.src = isInPages ? img.getAttribute('data-src-pages') : img.getAttribute('data-src-root');
-      // Fallback: if image fails to load, try the other relative path
+      // Use config if available, otherwise detect path
+      var basePath = window.ConectaMayorConfig ? window.ConectaMayorConfig.baseRelative : 
+                     (location.pathname.indexOf('/pages/') !== -1 ? '../' : './');
+      img.src = basePath + 'icons/logo-elder.svg';
+      // Fallback: if image fails to load, try alternate path
       img.addEventListener('error', function(){
-        var alt = img.getAttribute('data-src-pages') === img.src ? img.getAttribute('data-src-root') : img.getAttribute('data-src-pages');
+        var alt = location.pathname.indexOf('/pages/') !== -1 ? 'icons/logo-elder.svg' : '../icons/logo-elder.svg';
         if(alt && alt !== img.src) img.src = alt;
       });
     }catch(e){ /* ignore */ }

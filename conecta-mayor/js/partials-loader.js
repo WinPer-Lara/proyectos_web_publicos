@@ -46,6 +46,9 @@
     if(headerEl) headerEl.innerHTML = headerHtml || FALLBACK_HEADER;
     if(footerEl) footerEl.innerHTML = footerHtml || FALLBACK_FOOTER;
 
+    // Signal that partials have been loaded
+    window.ConectaMayorPartialsLoaded = true;
+    
     // Ensure accessibility init runs after insertion
     if(window.initAccessibilityControls) window.initAccessibilityControls();
   }
